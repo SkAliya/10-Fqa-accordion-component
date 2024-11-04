@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* CSS VARIABLES */
+:root {
+  /* COLORS */
+  --color-heading: hsl(292, 42%, 14%);
+  --color-text: hsl(292, 16%, 49%);
+  --color-bg: hsl(0, 0%, 100%);
+  --color-mainbg: hsl(275, 100%, 97%);
+}
+
+/* media-queries */
+$bp-xlarge: 81.25em; //1300px
+$bp-large: 56.25em; //900px
+$bp-medium: 50em; //800px
+$bp-small: 43.75em; //700px
+$bp-smaller: 37.5em; //600px
+/* UTILITY CLASSES */
+.mb-medium {
+  margin-bottom: 1rem;
+}
+/* GLOBAL SETTINGS */
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  // @media only screen and (max-width: $bp-xlarge) {
+  //   font-size: 50%;
+  // }
+  // @media only screen and (max-width: $bp-large) {
+  //   font-size: 43.75%;
+  // }
+  // @media only screen and (max-width: $bp-medium) {
+  //   font-size: 37.5%;
+  // }
+  // @media only screen and (max-width: $bp-small) {
+  //   font-size: 31.25%;
+  // }
+}
+
+body {
+  min-height: 100vh;
+  font-size: 1.6rem;
+  font-family: "Work Sans", sans-serif;
+  line-height: 1.6;
+  color: var(--color-heading);
+  background-image: url("../assets/images/background-pattern-desktop.svg"),
+    linear-gradient(to right, var(--color-mainbg), var(--color-mainbg));
+  background-repeat: no-repeat;
+  background-size: contain;
+  /* for centering all items */
+  display: grid;
+  place-content: center;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+.hr {
+  height: 0.2px;
+  background-color: hsla(293, 16%, 49%, 0.1);
+  margin: 2rem 0;
+}
+/* footer styling */
+
+// .attribution {
+//   font-size: 11px;
+//   text-align: center;
+// }
+// .attribution a {
+//   color: var(--color-card2);
+// }

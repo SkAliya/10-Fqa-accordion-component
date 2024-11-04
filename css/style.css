@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+/* CSS VARIABLES */
+:root {
+  /* COLORS */
+  --color-heading: hsl(292, 42%, 14%);
+  --color-text: hsl(292, 16%, 49%);
+  --color-bg: hsl(0, 0%, 100%);
+  --color-mainbg: hsl(275, 100%, 97%);
+}
+
+/* media-queries */
+/* UTILITY CLASSES */
+.mb-medium {
+  margin-bottom: 1rem;
+}
+
+/* GLOBAL SETTINGS */
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 1.6rem;
+  font-family: "Work Sans", sans-serif;
+  line-height: 1.6;
+  color: var(--color-heading);
+  background-image: url("../assets/images/background-pattern-desktop.svg"), linear-gradient(to right, var(--color-mainbg), var(--color-mainbg));
+  background-repeat: no-repeat;
+  background-size: contain;
+  /* for centering all items */
+  display: grid;
+  place-content: center;
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+.hr {
+  height: 0.2px;
+  background-color: hsla(293, 16%, 49%, 0.1);
+  margin: 2rem 0;
+}
+
+/* footer styling */
+.container {
+  max-width: 60rem;
+  background-color: var(--color-bg);
+  border-radius: 1rem;
+  padding: 3.5rem;
+  margin: 15rem;
+  box-shadow: 0 2px 30px 10px rgba(93, 3, 107, 0.139);
+}
+.container__heading {
+  margin-bottom: 2.5rem;
+}
+.container__heading--star {
+  height: 3.2rem;
+  margin-right: 1rem;
+}
+.container__heading--txt {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.list {
+  list-style: none;
+}
+.list__item:hover .list__item--questions__question, .list__item:focus .list__item--questions__question {
+  cursor: pointer;
+  color: rgb(150, 22, 210);
+}
+.list__item--questions {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  column-gap: 3rem;
+}
+.list__item--questions__question {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+.list__item--questions__icon:hover {
+  cursor: pointer;
+}
+.list__item--answer {
+  margin-top: 2rem;
+  color: var(--color-text);
+}
+
+.hide {
+  display: none;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,60 @@
+@use "../sass/base.scss" as var1;
+
+// container
+.container {
+  max-width: 60rem;
+  background-color: var(--color-bg);
+  border-radius: 1rem;
+  padding: 3.5rem;
+  margin: 15rem;
+
+  box-shadow: 0 2px 30px 10px rgba(93, 3, 107, 0.139);
+  &__heading {
+    &--star {
+      height: 3.2rem;
+      margin-right: 1rem;
+    }
+    &--txt {
+      font-size: 4rem;
+      font-weight: 700;
+    }
+    margin-bottom: 2.5rem;
+  }
+}
+
+.list {
+  list-style: none;
+  &__item {
+    &:hover,
+    &:focus {
+      .list__item--questions__question {
+        cursor: pointer;
+        color: rgb(150, 22, 210);
+      }
+    }
+
+    &--questions {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      column-gap: 3rem;
+      &__question {
+        font-size: 1.8rem;
+        font-weight: 700;
+      }
+      &__icon {
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    &--answer {
+      margin-top: 2rem;
+      color: var(--color-text);
+    }
+  }
+}
+//for hiding content
+.hide {
+  display: none;
+}
