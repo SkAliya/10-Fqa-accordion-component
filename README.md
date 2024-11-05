@@ -28,7 +28,7 @@ This is a solution to the [FAQ accordion challenge on Frontend Mentor](https://w
 
 <h2 align="center">Links</h2>
 
-- Solution URL: [FAQ-accordion-challenge-solution| Frontend Mentor](https://www.frontendmentor.io/solutions/beautiful-4-cards-section-built-with-just-using-html5-and-css3-X3uWFRcPi2)
+- Solution URL: [FAQ-accordion-challenge-solution| Frontend Mentor](https://www.frontendmentor.io/solutions/responsive-faq-component-and-also-with-keyboard-navigation--IrT2vImi3)
 - Live Site URL: [https://skaliya.github.io/10-Fqa-accordion-component/](https://skaliya.github.io/10-Fqa-accordion-component/)
 
 <br>
