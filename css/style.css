@@ -8,16 +8,26 @@
   --color-mainbg: hsl(275, 100%, 97%);
 }
 
-/* media-queries */
-/* UTILITY CLASSES */
-.mb-medium {
-  margin-bottom: 1rem;
-}
-
+/* MEDIA - QUERIES */
 /* GLOBAL SETTINGS */
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+}
+@media only screen and (max-width: 68.75em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media only screen and (max-width: 50em) {
+  html {
+    font-size: 43.75%;
+  }
+}
+@media only screen and (max-width: 43.75em) {
+  html {
+    font-size: 37.5%;
+  }
 }
 
 body {
@@ -29,9 +39,20 @@ body {
   background-image: url("../assets/images/background-pattern-desktop.svg"), linear-gradient(to right, var(--color-mainbg), var(--color-mainbg));
   background-repeat: no-repeat;
   background-size: contain;
-  /* for centering all items */
+  /*  CENTER CONTAINER */
   display: grid;
   place-content: center;
+  /* CHANGE BG IMG */
+}
+@media only screen and (max-width: 43.75em) {
+  body {
+    background-image: url("../assets/images/background-pattern-mobile.svg"), linear-gradient(to right, var(--color-mainbg), var(--color-mainbg));
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  body {
+    align-content: start;
+  }
 }
 
 *,
@@ -42,13 +63,23 @@ body {
   box-sizing: inherit;
 }
 
+/* HORIZONAL RULE - HR */
 .hr {
   height: 0.2px;
   background-color: hsla(293, 16%, 49%, 0.1);
   margin: 2rem 0;
 }
 
-/* footer styling */
+/* FOOTER STYLING */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: rgb(150, 22, 210);
+}
+
 .container {
   max-width: 60rem;
   background-color: var(--color-bg);
@@ -56,6 +87,11 @@ body {
   padding: 3.5rem;
   margin: 15rem;
   box-shadow: 0 2px 30px 10px rgba(93, 3, 107, 0.139);
+}
+@media only screen and (max-width: 43.75em) {
+  .container {
+    margin: 20rem 2.5rem 10rem 2.5rem;
+  }
 }
 .container__heading {
   margin-bottom: 2.5rem;
@@ -79,12 +115,15 @@ body {
 .list__item--questions {
   display: flex;
   justify-content: space-between;
-  align-items: start;
+  align-items: center;
   column-gap: 3rem;
 }
 .list__item--questions__question {
   font-size: 1.8rem;
   font-weight: 700;
+}
+.list__item--questions__icon {
+  height: 4.5rem;
 }
 .list__item--questions__icon:hover {
   cursor: pointer;

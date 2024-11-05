@@ -9,32 +9,25 @@
   --color-mainbg: hsl(275, 100%, 97%);
 }
 
-/* media-queries */
-$bp-xlarge: 81.25em; //1300px
-$bp-large: 56.25em; //900px
+/* MEDIA - QUERIES */
+$bp-large: 68.75em; //1100px
 $bp-medium: 50em; //800px
 $bp-small: 43.75em; //700px
 $bp-smaller: 37.5em; //600px
-/* UTILITY CLASSES */
-.mb-medium {
-  margin-bottom: 1rem;
-}
+
 /* GLOBAL SETTINGS */
 html {
   font-size: 62.5%;
   box-sizing: border-box;
-  // @media only screen and (max-width: $bp-xlarge) {
-  //   font-size: 50%;
-  // }
-  // @media only screen and (max-width: $bp-large) {
-  //   font-size: 43.75%;
-  // }
-  // @media only screen and (max-width: $bp-medium) {
-  //   font-size: 37.5%;
-  // }
-  // @media only screen and (max-width: $bp-small) {
-  //   font-size: 31.25%;
-  // }
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%;
+  }
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 43.75%;
+  }
+  @media only screen and (max-width: $bp-small) {
+    font-size: 37.5%;
+  }
 }
 
 body {
@@ -47,9 +40,17 @@ body {
     linear-gradient(to right, var(--color-mainbg), var(--color-mainbg));
   background-repeat: no-repeat;
   background-size: contain;
-  /* for centering all items */
+  /*  CENTER CONTAINER */
   display: grid;
   place-content: center;
+  /* CHANGE BG IMG */
+  @media only screen and (max-width: $bp-small) {
+    background-image: url("../assets/images/background-pattern-mobile.svg"),
+      linear-gradient(to right, var(--color-mainbg), var(--color-mainbg));
+  }
+  @media only screen and (max-width: $bp-smaller) {
+    align-content: start;
+  }
 }
 
 *,
@@ -59,18 +60,18 @@ body {
   margin: 0;
   box-sizing: inherit;
 }
-
+/* HORIZONAL RULE - HR */
 .hr {
   height: 0.2px;
   background-color: hsla(293, 16%, 49%, 0.1);
   margin: 2rem 0;
 }
-/* footer styling */
 
-// .attribution {
-//   font-size: 11px;
-//   text-align: center;
-// }
-// .attribution a {
-//   color: var(--color-card2);
-// }
+/* FOOTER STYLING */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: rgb(150, 22, 210);
+}

@@ -1,14 +1,17 @@
 @use "../sass/base.scss" as var1;
 
-// container
+// CONTAINER
 .container {
   max-width: 60rem;
   background-color: var(--color-bg);
   border-radius: 1rem;
   padding: 3.5rem;
   margin: 15rem;
-
   box-shadow: 0 2px 30px 10px rgba(93, 3, 107, 0.139);
+  //MEDIA-QUERIES
+  @media only screen and (max-width: var1.$bp-small) {
+    margin: 20rem 2.5rem 10rem 2.5rem;
+  }
   &__heading {
     &--star {
       height: 3.2rem;
@@ -36,13 +39,14 @@
     &--questions {
       display: flex;
       justify-content: space-between;
-      align-items: start;
+      align-items: center;
       column-gap: 3rem;
       &__question {
         font-size: 1.8rem;
         font-weight: 700;
       }
       &__icon {
+        height: 4.5rem;
         &:hover {
           cursor: pointer;
         }
@@ -54,7 +58,7 @@
     }
   }
 }
-//for hiding content
+//HIDING CONTENT CLASS
 .hide {
   display: none;
 }

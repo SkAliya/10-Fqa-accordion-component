@@ -44,7 +44,6 @@ function keyFuns(e) {
   }
 }
 function forwardFun(e) {
-  console.log(e);
   if (e === lastLi) {
     firstLi.focus();
   } else {
@@ -55,7 +54,6 @@ function forwardFun(e) {
 }
 
 function backwardFun(e) {
-  console.log(e);
   if (e === firstLi) {
     lastLi.focus();
   } else {
